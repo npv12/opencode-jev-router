@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@npv12/opencode-jev-router",
+  "version": "0.1.0",
+  "description": "OpenCode V2 plugin that uses Jev to pick reasoning effort and worker models per prompt",
+  "type": "module",
+  "license": "MIT",
+  "author": "Pranav <pranav10121@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npv12/opencode-jev-router.git"
+  },
+  "homepage": "https://github.com/npv12/opencode-jev-router#readme",
+  "bugs": "https://github.com/npv12/opencode-jev-router/issues",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "router",
+    "jev",
+    "reasoning-effort"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "opencode": ">=2.0.0"
+  },
+  "scripts": {
+    "build": "bun scripts/build.ts",
+    "check": "bun run typecheck && bun run test",
+    "prepack": "bun run build",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.31",
+    "@types/bun": "1.4.0",
+    "typescript": "5.8.2"
+  }
+}
